@@ -65,6 +65,11 @@ public class EELoader {
 			EmendatusEnigmatica.LOGGER.info("Created /config/emendatusenigmatica/material/");
 		}
 
+		File customDir = configDir.resolve("custom/").toFile();
+		if (!customDir.exists() && customDir.mkdirs()) {
+			EmendatusEnigmatica.LOGGER.info("Created /config/emendatusenigmatica/custom/");
+		}
+
 		ArrayList<JsonObject> strataDefinition = FileIOHelper.loadFilesAsJsonObjects(strataDir);
 		ArrayList<JsonObject> materialDefinition = FileIOHelper.loadFilesAsJsonObjects(materialDir);
 

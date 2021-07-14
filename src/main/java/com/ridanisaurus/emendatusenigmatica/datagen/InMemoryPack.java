@@ -91,7 +91,6 @@ public class InMemoryPack implements IResourcePack {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
         }
         return result;
     }

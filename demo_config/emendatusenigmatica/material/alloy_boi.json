@@ -3,12 +3,12 @@
   "localisedName": "Alloy Boi",
   "color": "FF6633",
   "processedType": [
-    "storage_block",
-    "ingot",
-    "nugget",
-    "dust",
-    "plate",
-    "gear",
-    "rod"
+    "emendatusenigmatica:storage_block",
+    "emendatusenigmatica:ingot",
+    "emendatusenigmatica:nugget",
+    "emendatusenigmatica:dust",
+    "emendatusenigmatica:plate",
+    "emendatusenigmatica:gear",
+    "emendatusenigmatica:rod"
   ]
 }

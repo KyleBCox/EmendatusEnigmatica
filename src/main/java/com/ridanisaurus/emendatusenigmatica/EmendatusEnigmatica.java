@@ -101,6 +101,7 @@ public class EmendatusEnigmatica {
         // Resource Pack
         if (FMLEnvironment.dist == Dist.CLIENT) {
             Minecraft.getInstance().getResourcePackList().addPackFinder(new EEPackFinder(PackType.RESOURCE));
+            Minecraft.getInstance().getResourcePackList().addPackFinder(new EECustomPackFinder());
         }
 
         MinecraftForge.EVENT_BUS.addListener(this::onServerStart);
@@ -171,6 +172,7 @@ public class EmendatusEnigmatica {
     public static void injectDatapackFinder(ResourcePackList resourcePacks) {
         if (DistExecutor.unsafeRunForDist(() -> () -> resourcePacks != Minecraft.getInstance().getResourcePackList(), () -> () -> true)) {
             resourcePacks.addPackFinder(new EEPackFinder(PackType.RESOURCE));
+            resourcePacks.addPackFinder(new EECustomPackFinder());
             EmendatusEnigmatica.LOGGER.info("Injecting data pack finder.");
         }
     }
